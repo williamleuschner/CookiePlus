@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html manifest="manifest.php">
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="apple-touch-startup-image" href="CookiePlusSplash2.png" />
+	<link rel="stylesheet" href="jqtouch/themes/css/jqtouch.css" title="jQTouch" />
+	<link rel="stylesheet" href="CookiePlus.css" />
+	<script src="jqtouch/src/lib/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jqtouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="CookiePlus.js"></script>
+	<script type="text/javascript">
+		$('a[target="_blank"]').bind('click', function() {
+	       	if (confirm('This link opens in a new window.')) {
+	            return true;
+	        } else {
+	            return false;
+	        }
+	    });
+	</script>
+	<style type="text/css">
+		p.detail {
+			text-align:center;
+			color:#EEE;
+		}
+	</style>
+	<title>Cookie+</title>
+</head>
+<body>
+	<div id="jqt">
+		<section id="home">
+			<header class="toolbar">
+				<h1>Cookie+</h1>
+				<a class="button slideup" id="infoButton" href="#about">About</a>
+			</header>
+			<h2>Manage</h2>
+			<ul class="rounded">
+				<li class="arrow"><a href="#customers">Customers</a></li>
+				<li class="arrow"><a href="#databaseViewer">View Database</a></li>
+			</ul>
+			<br />
+			<ul class="rounded">
+				<li class="arrow"><a href="#settings">Settings</a></li>
+			</ul>
+		</section>
+		<div id="about">
+			<div class="toolbar">
+				<h1>About</h1>
+			</div>
+			<div>
+				<p class="detail">
+					<br />
+					<br />
+					Cookie+ is a web app designed to<br>
+					make managing Girl Scout Cookie<br>
+					delivery much easier.
+				</p>
+				<br>
+				<br>
+				<p class="detail" style="font-size:15px;">
+					Designed and Built by William Leuschner
+				</p>
+				<br>
+				<br>
+				<ul class="rounded">
+					<li class="forward"><a target="_blank" href="http://174.60.180.15/gsCookieApp/changelog.html">Version:<small class="counter">&alpha;1.2</small></a></li>
+				</ul>
+				<br>
+				<br>
+				<br>
+				<a class="grayButton goback" href="#home">Close</a>
+			</div>
+		</div>
+		<div id="customers">
+			<div class="toolbar">
+				<h1>Customers</h1>
+				<a href="#home" class="button back">Home</a>
+				<a href="#addBuyer" class="slideup add">+</a>
+			</div>
+			<h2>Tap a name to view details.</h2>
+			<ul class="rounded" id="buyerList">
+			</ul>
+		</div>
+		<div id="customerInfo">
+			<div id="customerNameHeading" class="toolbar">
+				<a href="#customers" class="button back">Back</a>
+			</div>
+			<ul class="rounded">
+				<li>Name<small id="customerName"></small></li>
+				<li id="deliveredListItem">Delivered<small id="cookiesDelivered"></small></li>
+
+			</ul>
+		</div>
+		<div id="databaseViewer">
+			<div class="toolbar">
+				<h1>Database</h1>
+				<a href="#home" class="button back">Home</a>
+			</div>
+			<p style="color:#fff; text-align:center;">
+				Unimplemented, as of yet.
+			</p>
+		</div>
+		<div id="settings">
+			<div class="toolbar">
+				<h1>Settings</h1>
+				<a href="#home" class="button back">Home</a>
+			</div>
+			<form class="scroll">
+				<ul class="edit rounded">
+					<li><input type="number" name="price" id="price" placeholder="Price/box" pattern="[34]\.[025]{2}" /></li>
+					<li><input type="text" name="cookies" id="cookies" placeholder="Comma separated list of cookie types"/></li>
+				</ul>
+				<input type="submit" name="settingsSubmit" id="settingsSubmit" class="submit grayButton" value="Save Changes"/>
+			</form>
+		</div>
+		<div id="addBuyer">
+			<div class="toolbar">
+				<h1>Add Customer</h1>
+				<a href="#customers" class="button cancel">Cancel</a>
+			</div>
+			<form class="scroll" id="buyerAdd">
+				<ul class="rounded">
+					<li><input type="text" id="fName" name="fName" autocorrect="off" placeholder="First Name"/></li>
+					<li><input type="text" id="lName" name="lName" autocorrect="off" placeholder="Last Name" /></li>
+					<li class="arrow" id="cookieAdd"><a href="#addBuyer" id="cookieControl">Add Cookies</a></li>
+				</ul>
+				<input type="submit" class="grayButton submit" name="action" value="Save Changes" />
+			</form>
+		</div>
+	</div>
+</body>
+</html>
