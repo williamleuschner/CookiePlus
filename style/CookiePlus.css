@@ -1,0 +1,57 @@
+.deleteButton {
+	display:block;
+	position:absolute;
+	top:11px;
+	right:8px;
+	overflow: hidden;
+	width: auto;
+	max-width: 47px;
+	height: 15px;
+	font-family: inherit;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 15px;
+	text-overflow:clip;
+	text-decoration: none;
+	white-space: nowrap;
+	background: none;
+	margin: -7px -5px -7px 0 !important;
+	padding: 10px;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+	box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+	border: 1px solid black;
+	-webkit-border-radius: 5px 5px 5px 5px !important;
+	border-radius: 5px 5px 5px 5px !important;
+	background-image: none;
+	background-color: #d83b38;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e57a78), color-stop(50%, #dc504d), color-stop(51%, #d83b38), color-stop(100%, #ce2c28));
+	background-image: -webkit-linear-gradient(top, #e57a78, #dc504d 50%, #d83b38 51%, #ce2c28);
+	background-image: linear-gradient(top, #e57a78, #dc504d 50%, #d83b38 51%, #ce2c28);
+	color: white;
+	text-shadow: #b92724 0 -1px 0;
+}
+.deleteButton:active, .deleteButton.active; {
+	background-image: none;
+	background-color: #c12926;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #de5856), color-stop(50%, #d52e2b), color-stop(51%, #c12926), color-stop(100%, #ac2422));
+	background-image: -webkit-linear-gradient(top, #de5856, #d52e2b 50%, #c12926 51%, #ac2422);
+	background-image: linear-gradient(top, #de5856, #d52e2b 50%, #c12926 51%, #ac2422);
+	color: white;
+	text-shadow: #97201e 0 -1px 0;
+}
+@-webkit-keyframes mySlide {
+	from {width:0;}
+	to {width:47px;}
+}
+.mySlide {
+	-webkit-animation:mySlide 0.3s;
+	text-overflow:clip;
+}
+.mySlide.out {
+	-webkit-animation-direction:reverse;
+	-webkit-animation:mySlide 0.3s;
+}
+p.detail {
+	text-align:center;
+	color:#EEE;
+}
