@@ -6,9 +6,9 @@ var types = []
 var fName = "This is why it doesn't work."
 //set up JQTouch
 var jQT = $.jQTouch({
-    icon: 'CookiePlus.png',
-    //icon4: 'CookiePlus4.png',
-    //startupScreen: 'CookiePlusSplash2.png',
+    icon: 'img/CookiePlus.png',
+    icon4: 'img/CookiePlus4.png',
+    startupScreen: 'img/CookiePlusSplash2.png',
     statusBar: 'black'
 });
 $(function() {
