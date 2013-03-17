@@ -25,6 +25,13 @@ $(document).ready(function(){
     deleteHandler()
     $('#customers a').tap(populateCustomerInfo);
     $(document).on('pageAnimationStart', hideDeleteButton)
+    $('a[target="_blank"]').bind('click', function() {
+	       	if (confirm('This link opens in a new window.')) {
+	            return true;
+	        } else {
+	            return false;
+	        }
+	    });
 });
 function addCookieSelector() {
 	$('#cookieAdd').before('<li class="arrow" id="cookieSelector' + cookieSelectorCount + '"><select placeholder="Cookies" id="selectorContainer' + cookieSelectorCount + '"><optgroup label="Cookies" id="selectorGroup'+cookieSelectorCount + '"></optgroup></select></li>');
