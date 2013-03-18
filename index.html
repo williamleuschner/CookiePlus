@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html manifest="manifest.php">
+<html manifest="manifest.php" lang="en">
 <head>
 	<meta charset="UTF-8"/>
 	<link rel="apple-touch-startup-image" href="img/CookiePlusSplash2.png" />
 	<link rel="stylesheet" href="jqtouch/themes/css/jqtouch.css" title="jQTouch" />
 	<link rel="stylesheet" href="style/CookiePlus.css" />
-	<script src="jqtouch/src/lib/zepto.js" type="text/javascript" charset="utf-8"></script>
-	<script src="jqtouch/src/jqtouch.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript" src="script/CookiePlus.js"></script>
+	<script src="jqtouch/src/lib/zepto.js" charset="utf-8"></script>
+	<script src="jqtouch/src/jqtouch.js" charset="utf-8"></script>
+	<script src="script/CookiePlus.js" charset="utf-8"></script>
 	<title>Cookie+</title>
 </head>
 <body>
@@ -27,10 +27,10 @@
 				<li class="arrow"><a href="#settings">Settings</a></li>
 			</ul>
 		</section>
-		<div id="about">
-			<div class="toolbar">
+		<section id="about">
+			<header class="toolbar">
 				<h1>About</h1>
-			</div>
+			</header>
 			<div>
 				<p class="detail">
 					<br />
@@ -54,41 +54,41 @@
 				<br>
 				<a class="grayButton goback" href="#home">Close</a>
 			</div>
-		</div>
-		<div id="customers">
-			<div class="toolbar">
+		</section>
+		<section id="customers">
+			<header class="toolbar">
 				<h1>Customers</h1>
 				<a href="#home" class="button back">Home</a>
 				<a href="#addBuyer" class="slideup add">+</a>
-			</div>
+			</header>
 			<h2>Tap a name to view details.</h2>
 			<ul class="rounded" id="buyerList">
 			</ul>
-		</div>
-		<div id="customerInfo">
-			<div id="customerNameHeading" class="toolbar">
+		</section>
+		<section id="customerInfo">
+			<header id="customerNameHeading" class="toolbar">
 				<a href="#customers" class="button back">Back</a>
-			</div>
+			</header>
 			<ul class="rounded">
 				<li>Name<small id="customerName"></small></li>
 				<li id="deliveredListItem">Delivered<small id="cookiesDelivered"></small></li>
 
 			</ul>
-		</div>
-		<div id="databaseViewer">
-			<div class="toolbar">
+		</section>
+		<section id="databaseViewer">
+			<header class="toolbar">
 				<h1>Database</h1>
 				<a href="#home" class="button back">Home</a>
-			</div>
+			</header>
 			<p style="color:#fff; text-align:center;">
 				Unimplemented, as of yet.
 			</p>
-		</div>
-		<div id="settings">
-			<div class="toolbar">
+		</section>
+		<section id="settings">
+			<header class="toolbar">
 				<h1>Settings</h1>
 				<a href="#home" class="button back">Home</a>
-			</div>
+			</header>
 			<form class="scroll">
 				<ul class="edit rounded">
 					<li><input type="number" name="price" id="price" placeholder="Price/box" pattern="[34]\.[025]{2}" /></li>
@@ -96,12 +96,12 @@
 				</ul>
 				<input type="submit" name="settingsSubmit" id="settingsSubmit" class="submit grayButton" value="Save Changes"/>
 			</form>
-		</div>
-		<div id="addBuyer">
-			<div class="toolbar">
+		</section>
+		<section id="addBuyer">
+			<header class="toolbar">
 				<h1>Add Customer</h1>
 				<a href="#customers" class="button cancel">Cancel</a>
-			</div>
+			</header>
 			<form class="scroll" id="buyerAdd">
 				<ul class="rounded">
 					<li><input type="text" id="fName" name="fName" autocorrect="off" placeholder="First Name"/></li>
@@ -110,7 +110,7 @@
 				</ul>
 				<input type="submit" class="grayButton submit" name="action" value="Save Changes" />
 			</form>
-		</div>
+		</section>
 	</div>
 </body>
 </html>
