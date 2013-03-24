@@ -2,7 +2,7 @@
   header('Content-Type: text/cache-manifest');
   echo "CACHE MANIFEST\n";
 
-  //rev 04
+  //rev 05
 
   $hashes = "";
 
