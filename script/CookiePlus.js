@@ -61,6 +61,7 @@ function addBuyer() {
 function applyBuyer(fName, lName) {
 	$('#buyerList').prepend('<li class="arrow swipeDelete"><a class="swipeDelete" href="#customerInfo">' + fName + ' ' + lName + '</a></li>');
 	deleteHandler()
+
 	return true;
 }
 //see function name
@@ -80,13 +81,15 @@ function loadSettings() {
 function populateCustomerInfo() {
 	$('#customerName').append()
 }
-function writeToLocal(local,storage) {
+function writeToLocal() {
 	//code
 }
-function deleteButton() {
+function deleteButton(toDelete) {
+	console.log(toDelete)
 	$('#deleteButton').remove();
 	$(this).append('<a id="deleteButton" style="text-overflow:clip; z-index:100;" class="deleteButton mySlide" href="_blank">Delete</a>');
 	$('#deleteButton').tap(destroyCustomer);
+
 }
 function hideDeleteButton() {
 	$('#deleteButton').removeClass("mySlide");
@@ -109,10 +112,11 @@ function desktopResize(type) {
 function destroyCustomer() {
 	alert("NO!");
 	hideDeleteButton();
+
 	return false;
 }
 function deleteHandler() {
-	$('.swipeDelete').swipeLeft(deleteButton);
+	$('.swipeDelete').swipeLeft(deleteButton(this));
 	$('.swipeDelete').swipeRight(hideDeleteButton);
 }
 //regex to find comments: //[A-z .',0-9]*\n
