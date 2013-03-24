@@ -342,6 +342,7 @@
             if (jQTSettings.fixedViewport) {
                 hairExtensions += '<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>';
             }
+            //width=device-width, 
 
             // Set full-screen
             if (jQTSettings.fullScreen) {
