@@ -11,8 +11,7 @@ var jQT = $.jQTouch({
     startupScreen: 'img/CookiePlusSplash2.png',
     startupScreen4: 'img/CookiePlusSplash.png',
     statusBar: 'black',
-    fixedViewport: 'true',
-    addGlossToIcon: 'false'
+    fixedViewport: 'true'
 });
 $(function() {
 	jQT.addAnimation({
