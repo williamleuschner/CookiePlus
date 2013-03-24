@@ -326,7 +326,7 @@
             }
 
             // Set appropriate icon (retina display available in iOS 4.2 and later.)
-            var precomposed = (jQTSettings.addGlossToIcon) ? '' : '-precomposed';
+            var precomposed = null;//(jQTSettings.addGlossToIcon) ? '' : '-precomposed';
             if (jQTSettings.icon) {
                 hairExtensions += '<link rel="apple-touch-icon' + precomposed + '" href="' + jQTSettings.icon + '" />';
             }
