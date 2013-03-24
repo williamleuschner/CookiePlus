@@ -85,7 +85,7 @@ function writeToLocal() {
 	//code
 }
 function deleteButton(toDelete) {
-	console.log(toDelete)
+	alert(toDelete);
 	$('#deleteButton').remove();
 	$(this).append('<a id="deleteButton" style="text-overflow:clip; z-index:100;" class="deleteButton mySlide" href="_blank">Delete</a>');
 	$('#deleteButton').tap(destroyCustomer);
@@ -116,7 +116,7 @@ function destroyCustomer() {
 	return false;
 }
 function deleteHandler() {
-	$('.swipeDelete').swipeLeft(deleteButton(this));
+	$('.swipeDelete').swipeLeft(deleteButton($(this)));
 	$('.swipeDelete').swipeRight(hideDeleteButton);
 }
 //regex to find comments: //[A-z .',0-9]*\n
