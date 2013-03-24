@@ -11,7 +11,8 @@ var jQT = $.jQTouch({
     startupScreen: 'img/CookiePlusSplash2.png',
     startupScreen4: 'img/CookiePlusSplash.png',
     statusBar: 'black',
-    fixedViewport: 'true'
+    fixedViewport: 'true',
+    addGlossToIcon: 'false'
 });
 $(function() {
 	jQT.addAnimation({
@@ -118,7 +119,7 @@ function destroyCustomer() {
 	return false;
 }
 function deleteHandler() {
-	$('.swipeDelete').swipeLeft(deleteButton($(this)));
+	$('.swipeDelete').swipeLeft(deleteButton);
 	$('.swipeDelete').swipeRight(hideDeleteButton);
 }
 //regex to find comments: //[A-z .',0-9]*\n
