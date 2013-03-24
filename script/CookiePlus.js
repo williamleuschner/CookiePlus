@@ -9,6 +9,7 @@ var jQT = $.jQTouch({
     icon: 'img/CookiePlus.png',
     icon4: 'img/CookiePlus4.png',
     startupScreen: 'img/CookiePlusSplash2.png',
+    startupScreen4: 'img/CookiePlusSplash.png',
     statusBar: 'black'
 });
 $(function() {
