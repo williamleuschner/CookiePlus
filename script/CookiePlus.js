@@ -87,7 +87,7 @@ function writeToLocal() {
 	//code
 }
 function deleteButton(toDelete) {
-	alert(toDelete);
+	//alert(toDelete);
 	$('#deleteButton').remove();
 	$(this).append('<a id="deleteButton" style="text-overflow:clip; z-index:100;" class="deleteButton mySlide" href="_blank">Delete</a>');
 	$('#deleteButton').tap(destroyCustomer);
