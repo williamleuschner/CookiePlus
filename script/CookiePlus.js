@@ -110,7 +110,7 @@ function desktopResize(type) {
 	}
 }
 function destroyCustomer() {
-	alert("NO!");
+	alert("Sorry.");
 	hideDeleteButton();
 
 	return false;
