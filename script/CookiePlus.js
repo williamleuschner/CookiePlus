@@ -23,7 +23,7 @@ $(document).ready(function(){
     $('#settings form').submit(saveSettings);
     $('#addBuyer form').submit(addBuyer);
     $('#settings').on('pageAnimationStart', loadSettings);
-    $('#buyerAdd').on('pageAnimationStart', clearBuyerFields);
+    $('#addBuyer').on('pageAnimationStart', clearBuyerFields);
     $('#cookieAdd a').tap(addCookieSelector);
     deleteHandler()
     $('#customers a').tap(populateCustomerInfo);
@@ -123,9 +123,9 @@ function deleteHandler() {
 	$('.swipeDelete').swipeRight(hideDeleteButton);
 }
 function clearBuyerFields() {
-	$('#fName').val(0);
-	$('#lName').val(0);
-	$('#addr').val(0);
+	$('#fName').val('');
+	$('#lName').val('');
+	$('#addr').val('');
 
 }
 //regex to find comments: //[A-z .',0-9]*\n
