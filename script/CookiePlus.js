@@ -23,7 +23,7 @@ $(document).ready(function(){
     $('#settings form').submit(saveSettings);
     $('#addBuyer form').submit(addBuyer);
     $('#settings').on('pageAnimationStart', loadSettings);
-    $('#buyerAdd').on('pageAnimationEnd', clearBuyerFields);
+    $('#buyerAdd').on('pageAnimationStart', clearBuyerFields);
     $('#cookieAdd a').tap(addCookieSelector);
     deleteHandler()
     $('#customers a').tap(populateCustomerInfo);
