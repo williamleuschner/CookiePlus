@@ -50,22 +50,19 @@ function addCookieSelector() {
 	cookieSelectorCount++;
 	return false; //prevent the link from linking.
 }
-//temporary function to let me see it's doing something, will fix l8r
+//Adds buyer to customers list and database
 function addBuyer() {
 	var lName = $('#lName').val();
 	var fName = $('#fName').val();
+	var addr = $('#addr').val();
 	buyers[buyersCounter][lName] = lName;
 	buyers[buyersCounter][fName] = fName;
-	applyBuyer(fName,lName);
-	jQT.goBack();
-	return false;
-}
-//Debug, may keep and use elsewhere
-function applyBuyer(fName, lName) {
+	buyers[buyersCounter][addr] = addr;
 	$('#buyerList').prepend('<li class="arrow swipeDelete"><a class="swipeDelete" href="#customerInfo">' + fName + ' ' + lName + '</a></li>');
 	deleteHandler()
-
-	return true;
+	jQT.goBack();
+	buyersCounter++
+	return false;
 }
 //see function name
 function saveSettings() {
@@ -85,7 +82,7 @@ function populateCustomerInfo() {
 	$('#customerName').append()
 }
 function writeToLocal() {
-	//code
+	
 }
 function deleteButton(toDelete) {
 	//alert(toDelete);
