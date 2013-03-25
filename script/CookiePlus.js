@@ -123,9 +123,9 @@ function deleteHandler() {
 	$('.swipeDelete').swipeRight(hideDeleteButton);
 }
 function clearBuyerFields() {
-	$('#fName').value = '';
-	$('#lName').value = '';
-	$('#addr').value = '';
+	$('#fName').val('');
+	$('#lName').val('');
+	$('#addr').val('');
 
 }
 //regex to find comments: //[A-z .',0-9]*\n
