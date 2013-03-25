@@ -23,10 +23,11 @@ $(document).ready(function(){
     $('#settings form').submit(saveSettings);
     $('#addBuyer form').submit(addBuyer);
     $('#settings').on('pageAnimationStart', loadSettings);
+    $('#buyerAdd').on('pageAnimationEnd', clearBuyerFields);
     $('#cookieAdd a').tap(addCookieSelector);
     deleteHandler()
     $('#customers a').tap(populateCustomerInfo);
-    $(document).on('pageAnimationStart', hideDeleteButton)
+    $(document).on('pageAnimationStart', hideDeleteButton);
     $('a[target="_blank"]').bind('click', function() {
 	       	if (confirm('This link opens in a new window.')) {
 	            return true;
@@ -120,5 +121,11 @@ function destroyCustomer() {
 function deleteHandler() {
 	$('.swipeDelete').swipeLeft(deleteButton);
 	$('.swipeDelete').swipeRight(hideDeleteButton);
+}
+function clearBuyerFields() {
+	$('#fName').value = '';
+	$('#lName').value = '';
+	$('#addr').value = '';
+
 }
 //regex to find comments: //[A-z .',0-9]*\n
